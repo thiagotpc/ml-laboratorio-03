@@ -68,34 +68,32 @@ A pasta src\fonts contém os arquivos de fontes manuscritas, escolhidas no Googl
 ### Out
 A pasta **out** armazena os arquivos gerados pelos scripts do programa.
 
-Na pasta new-data ficarão as imagens de data-augmentation e os arquivos de texto para rotulação das imagens geraadas e das novas da bases de treinamento.
+Na pasta **new-data** ficarão as imagens de data-augmentation e os arquivos de texto para rotulação das imagens geraadas e das novas da bases de treinamento.
 
-Na pasta svm ficarão os arquivos de extração de características para treino e validação da SVM.
+Na pasta **svm** ficarão os arquivos de extração de características para treino e validação da SVM.
 
-Na pasta reports ficarão as saídas dos experimentos, como modelo e matriz de confusão.
+Na pasta **reports** ficarão as saídas dos experimentos, como modelo e matriz de confusão.
 
-Na pasta graphs ficarão os gráficos para acurácia e perda a cada época, gerados durante os experimentos.
-
-Na pasta os resultados em formato CSV. Um arquivo csv para cada matriz de confusão e um arquivo resultados.csv com uma tabela contendo a identificação do experimento, tempo de treinamento, tempo de testes, acurácia e f1-score. O conteúdo da pasta é apagado e reescrito a cada nova execução.
+Na pasta **graphs** ficarão os gráficos para acurácia e perda a cada época, gerados durante os experimentos.
 
 Devido a grande quantidade de imagens o projeto não inclui as imagens geradas na execução dos experimentos. Também não inclui os arquivos de vetores de características pois somam mais de 1GB.
 
 ### Scripts
-- image-generator-by-fonts.py, gera imagens por fontes.
-- image-generator-by-direct-manipulation.py, gera imagens modificando a base com funções de rotação e resize.
-- image-generator-by-library.py, gera imagens usando biblioteca [Text-Image-Augmentation-python](https://github.com/RubanSeven/Text-Image-Augmentation-python).
-- merge-training-data.py, junta os rótulos e imagens para formar novos conjuntos de treinamento. 
-- lenet-cnn.py, roda os experimentos com LeNet5 e Outra CNN.
-- imagenet-extrator-and-svm.py, roda os experimentos com extração de características da ImageNet e SVM.
+- **image-generator-by-fonts.py**, gera imagens por fontes.
+- **image-generator-by-direct-manipulation.py**, gera imagens modificando a base com funções de rotação e resize.
+- **image-generator-by-library.py**, gera imagens usando biblioteca [Text-Image-Augmentation-python](https://github.com/RubanSeven/Text-Image-Augmentation-python).
+- **merge-training-data.py**, junta os rótulos e imagens para formar novos conjuntos de treinamento. 
+- **lenet-cnn.py**, roda os experimentos com LeNet5 e Outra CNN.
+- **imagenet-extrator-and-svm.py**, roda os experimentos com extração de características da ImageNet e SVM.
 
 ### Outros
-- augment.py e warp_mls.py, fazem parte da biblioteca Text-Image-Augmentation-python;
-- relatorio.pdf descreve os experimentos e comenta os resultados.
+- **augment.py** e **warp_mls.py**, fazem parte da biblioteca [Text-Image-Augmentation-python](https://github.com/RubanSeven/Text-Image-Augmentation-python);
+- **relatorio.pdf** descreve os experimentos e comenta os resultados.
 
 ## Principais Dependências
 - Biblioteca keras e scikit-learn para execução dos treinos e validação;
 - Biblioteca cv2 e PIL para manipulação das imagens;
-- Biblioteca Text-Image-Augmentator-python, para um dos conjuntos de *data augmentation*;
+- Biblioteca [Text-Image-Augmentation-python](https://github.com/RubanSeven/Text-Image-Augmentation-python), para um dos conjuntos de *data augmentation*;
 
 ## Modo de Funcionamento
 Execute os scripts nesta ordem: image-generators, merge, experimentos.
