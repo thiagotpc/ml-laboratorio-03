@@ -1,1 +1,4 @@
-out
+out/new-data/all-images/*.jpg
+out/new-data/direct-manipulation/*.jpg
+out/new-data/fonts-based/*.jpg
+out/new-data/using-library/*.jpg
